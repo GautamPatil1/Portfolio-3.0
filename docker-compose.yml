@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  django:
+    image: python:3.10
+    environment:
+      - GITHUB_REPO_LINK=https://github.com/GautamPatil1/Short_Stories_API
+    ports:
+      - "4500:4500"
