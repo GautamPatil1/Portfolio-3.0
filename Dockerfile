@@ -6,9 +6,12 @@ WORKDIR /code
 
 # Install system packages if needed
 
+# Copy project files
+COPY . /code/
+
 # Install dependencies
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the entry script
 COPY entrypoint.sh /entrypoint.sh
